@@ -2,8 +2,19 @@
 <script src="scriptHelper.js"></script>
 // const { myFetch, pickPlanet } = require("./scriptHelper");
 
-window.addEventListener("load", function() {
-    let form = document.querySelector("form[data-testid='testForm']");
+window.addEventListener("load", function()  {
+    let form = document.querySelector("form");
+
+    form.addEventListener("submit", function(event) {
+        // Prevent default form submission behavior
+        event.preventDefault();
+        let pilot = document.querySelector("input[name='pilotName']").value;
+        let copilot = document.querySelector("input[name='copilotName']").value;
+        let fuelLevel = parseFloat(document.querySelector("input[name='fuelLevel']").value);
+        let cargoMass = parseFloat (document.querySelector("input[name='cargoMass']").value);
+        let list = document.getElementById ('faultyItems');
+   
+   //Task 3
     let listedPlanets;
     console.log("window loaded")
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
@@ -30,13 +41,7 @@ window.addEventListener("load", function() {
     
 
     //add event listener for button
-    form.addEventListener("submit", function(event) {
-        // Prevent default form submission behavior
-        event.preventDefault();
-        let pilot = document.querySelector("input[name='pilotName']");
-        let copilot = document.querySelector("input[name='copilotName']");
-        let fuelLevel = document.querySelector("input[name='fuelLevel']");
-        let cargoLevel = document.querySelector("input[name='cargoMass']");
+    
 
     formSubmission(document, faultyItems, pilot, copilot, fuelLevel, cargoLevel)
     });
