@@ -42,10 +42,7 @@ window.addEventListener("load", function() {
     });
 });
 
-        // Call the formSubmission function with the selected input elements
-    //formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
     });
-    //call function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
-    //this is inside event listener /document =, list =
+   
     
  

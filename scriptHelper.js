@@ -14,7 +14,7 @@ function addDestinationInfo(_document, _name, _diameter, _star, _distance, _moon
                      <li>Number of Moons: ${moons}</li>
                  </ol>
                  <img src="">`
- }
+ };
  
  function validateInput(testInput) {
     // Check if the input is empty
