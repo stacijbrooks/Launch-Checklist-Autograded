@@ -8,7 +8,7 @@ window.addEventListener("load", function()  {
     form.addEventListener("submit", function(event) {
          // Prevent default form submission behavior
         event.preventDefault();
-        // event.stopPropagation();
+        event.stopPropagation();
 
         let pilot = document.querySelector("input[name=pilotName]").value;
         let copilot  = document.querySelector("input[name=copilotName]").value;
@@ -17,8 +17,7 @@ window.addEventListener("load", function()  {
         let list =document.getElementById('faultyItems');
         console.log("form listener");
         
-        //formSubmission(document, list, faultyItems, pilot, copilot, fuelLevel, cargoMass)
-        formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass);
+        formSubmission(document, list, faultyItems, pilot, copilot, fuelLevel, cargoMass)
     });
 
 
@@ -37,14 +36,13 @@ window.addEventListener("load", function()  {
             randomPlanet.star,
             randomPlanet.distance,
             randomPlanet.moons,
-            // randomPlanet.imageUrl
-            randomPlanet.image
+            randomPlanet.imageUrl
         )
         //console.log(listedPlanets);  
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     }).then(function () {
         console.log(listedPlanets);
-          
+       
     }).catch(function (error) {
         // Handle any errors that occur during the fetch operation
         console.error('Error fetching planets:', error);
