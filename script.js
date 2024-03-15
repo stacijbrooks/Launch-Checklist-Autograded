@@ -31,7 +31,7 @@ window.addEventListener("load", function()  {
         listedPlanets = result;
         let randomPlanet = pickPlanet(listedPlanets);
         addDestinationInfo(
-            document,
+            document,                       //could switch lines 26 - 54 with form listener 
             randomPlanet.name,
             randomPlanet.diameter,
             randomPlanet.star,

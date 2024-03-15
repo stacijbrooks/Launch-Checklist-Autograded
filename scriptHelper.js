@@ -40,14 +40,14 @@ let formSubmission = (document, list, pilot, copilot, fuelLevel, cargoMass) => {
 
     // if (pilot === "" || copilot === "" || fuelLevel === "" || cargoMass === "") {
     if (pilotValidation === "Empty" || copilotValidation === "Empty" || fuelLevelValidation === "Empty" || cargoMassValidation === "Empty") {    
-        console.log("All fields are required!");
+        //console.log("All fields are required!");
         alert("All fields are required!");
         return;
     } 
     
     // if (isNaN(fuelLevel) || isNaN(cargoMass)) {
     else if (pilotValidation === "Is a Number" || copilotValidation === "Is a Number" || fuelLevelValidation == "Not a Number" || cargoMassValidation == "Not a Number"){
-        console.log("Please enter valid information for all fields!");
+       // console.log("Please enter valid information for all fields!");
         alert("Please enter valid information for all fields!");
         return;
     } 
